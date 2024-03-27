@@ -1,4 +1,4 @@
-# [Evolt](https://evolt.js.org) - React Without Hooks
+# [Evolt](https://evolt.js.org) - Stay Reactive Without Magic
 
 [![npm](https://img.shields.io/npm/v/libh?logo=npm&label=%20&labelColor=%23eee)](https://www.npmjs.com/package/libh)
 ![GitHub Repo stars](https://img.shields.io/github/stars/ihasq/libh?logo=github)
@@ -11,7 +11,7 @@
 ```javascript
 const Counter = () => {
 
-    let count = 0; // this is static and private
+    let count = 0;
 
     return html => html`
         <div>
@@ -20,7 +20,7 @@ const Counter = () => {
                 Increment
             </button>
         </div>
-    `; // this is dynamic and public
+    `;
 }
 
 const { write } = await import('https://esm.sh/evolt');
