@@ -1,0 +1,14 @@
+{
+  "name": "evolt",
+  "version": "0.0.10",
+  "description": "Evolt is a JavaScript library for empowering the DOM manipulation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html"
+  ],
+  "author": "ihasq",
+  "license": "MIT"
+}
