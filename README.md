@@ -1,4 +1,4 @@
-# [Evolt](https://evolt.js.org)
+# [Evolt](https://evolt.js.org) - The True 'Write Less Do More' JavaScript
 
 [![npm](https://img.shields.io/npm/v/libh?logo=npm&label=%20&labelColor=%23eee)](https://www.npmjs.com/package/libh)
 ![GitHub Repo stars](https://img.shields.io/github/stars/ihasq/libh?logo=github)
@@ -9,28 +9,26 @@
 ---
 
 ```javascript
-const Main = () => {
+const Counter = () => {
 
-    let count = 0;
-    
+    let count = 0; // this is static and private
+
     return html => html`
-        <body>
-            <p>You clicked ${count} times</p>
-            <button @click=${() => count++};>
-                Click me
+        <div>
+            <h1>${count}</h1>
+            <button @click=${() => count++}>
+                Increment
             </button>
-        </body>
-    `;
+        </div>
+    `; // this is dynamic and public
 }
 
-// Write Into The DOM Or An Emulator Directly
+const { write } = await import('https://esm.sh/evolt');
 
-const { write } = await import("https://esm.sh/evolt");
-
-write(Main); // to globalThis.document.body
+write(document.body, Counter);
 ```
 
-**Evolt** is a JavaScript library for empowering the DOM manipulation.\
+**Evolt** is true 'Write Less Do More'JavaScript library for empowering the DOM manipulation.\
 less boilerplate, safe, built on top of standard html reference.
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/js-qfh42g?file=index.js)
